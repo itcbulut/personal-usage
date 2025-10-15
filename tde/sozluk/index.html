@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9/D TDK Sözlüğü</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/66cbdbbe83.js" crossorigin="anonymous"></script>
+
+  <style>
+    .home-button {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.5);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      user-select: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .home-button:hover {
+      background-color: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="home-button" aria-label="Ana Sayfaya Dön">
+    <i class="fas fa-home"></i> Ana Sayfa
+  </a>
+
+  <div class="container">
+    <header class="header" role="banner">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/T%C3%BCrk_Dil_Kurumu_logo.png" alt="TDK Logo" class="tdk-logo" />
+      <h1>📚 9/D TDK Sözlüğü</h1>
+    </header>
+
+    <section class="search-section" role="search" aria-label="Kelime arama">
+      <form id="searchForm" autocomplete="off" aria-describedby="search-desc">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Kelime yazın..."
+          required
+          aria-required="true"
+          aria-label="Aranacak kelime"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <button type="submit" aria-label="Ara"><span class="btn-text">Ara</span> <i class="fas fa-search"></i></button>
+      </form>
+      <div id="results" role="region" aria-live="polite" class="results"></div>
+    </section>
+
+    <section class="why-us" aria-label="Neden Biz">
+      <h2>⭐ Neden Biz?</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> TDK’nın resmi API’si ile gerçek zamanlı, güncel sonuçlar.</li>
+        <li><i class="fas fa-bolt"></i> Hızlı ve kolay arama deneyimi.</li>
+        <li><i class="fas fa-desktop"></i> Akıllı tahta ve bilgisayar için optimize edilmiş responsive tasarım.</li>
+        <li><i class="fas fa-universal-access"></i> Erişilebilirlik ve kullanıcı dostu arayüz.</li>
+        <li><i class="fas fa-shield-alt"></i> Güvenilir ve resmi kaynaklardan veri sağlama.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer role="contentinfo">
+    <p>© <span id="year"></span> ITC • Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
