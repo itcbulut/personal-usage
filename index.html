@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9/D Kütüphanesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>📚 9/D Kütüphanesi</h1>
+      <p>Ders kitapları ve kaynaklar bir arada.</p>
+    </div>
+    <button class="program-btn" onclick="toggleProgram()">📅 Ders Programı</button>
+  </header>
+
+  <nav class="tab-menu container" role="tablist">
+    <button class="tab-btn active" aria-selected="true" data-tab="fizik" id="fizik-tab" role="tab" onclick="showTab('fizik')">Fizik</button>
+    <button class="tab-btn" aria-selected="false" data-tab="tarih" id="tarih-tab" role="tab" onclick="showTab('tarih')">Tarih</button>
+    <button class="tab-btn" aria-selected="false" data-tab="tde" id="tde-tab" role="tab" onclick="openTDE()">TDE</button>
+    <button class="tab-btn" aria-selected="false" data-tab="kimya" id="kimya-tab" role="tab" onclick="showTab('kimya')">Kimya</button>
+    <button class="tab-btn" aria-selected="false" data-tab="biyo" id="biyo-tab" role="tab" onclick="showTab('biyo')">Biyoloji</button>
+    <button class="tab-btn" aria-selected="false" data-tab="ingilizce" id="ingilizce-tab" role="tab" onclick="showTab('ingilizce')">İngilizce</button>
+  </nav>
+
+  <main class="container">
+    <section id="fizik" class="tab-content active" role="tabpanel" aria-labelledby="fizik-tab">
+      <article class="card" tabindex="0" role="button" onclick="window.open('assets/fizik_kitap.pdf', '_blank')">
+        <div class="icon">📘</div>
+        <h3>Fizik Kitabı</h3>
+        <p>Ders kitabı.</p>
+      </article>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://fizikitc.vercel.app/', '_blank')">
+        <div class="icon">🎥</div>
+        <h3>MEBİ İçerikleri</h3>
+        <p>MEB tarafından yayınlanmış içerikler.</p>
+      </article>
+    </section>
+
+    <section id="tarih" class="tab-content" role="tabpanel" aria-labelledby="tarih-tab" hidden>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://ogmmateryal.eba.gov.tr/panel/panel/EKitapUniteOnizle.aspx?Id=5852', '_blank')">
+        <div class="icon">📙</div>
+        <h3>Tarih Kitabı</h3>
+        <p>Ders kitabı.</p>
+      </article>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://nayimungor.com/', '_blank')">
+        <div class="icon">📝</div>
+        <h3>NayimUngor.com</h3>
+        <p>Öğretmen tarafından eklenmiş kaynaklar.</p>
+      </article>
+    </section>
+
+    <section id="tde" class="tab-content" role="tabpanel" aria-labelledby="tde-tab" hidden></section>
+
+    <section id="kimya" class="tab-content" role="tabpanel" aria-labelledby="kimya-tab" hidden>
+      <article class="card" tabindex="0" role="button" onclick="window.open('assets/kimya_kitap.pdf', '_blank')">
+        <div class="icon">📕</div>
+        <h3>Kimya Kitabı</h3>
+        <p>Ders kitabı.</p>
+      </article>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://kimyaitc.vercel.app/', '_blank')">
+        <div class="icon">🎥</div>
+        <h3>MEBİ İçerikleri</h3>
+        <p>MEB tarafından yayınlanmış içerikler.</p>
+      </article>
+    </section>
+
+    <section id="biyo" class="tab-content" role="tabpanel" aria-labelledby="biyo-tab" hidden>
+      <article class="card" tabindex="0" role="button" onclick="window.open('assets/biyo_kitap.pdf', '_blank')">
+        <div class="icon">📙</div>
+        <h3>Biyoloji Kitabı</h3>
+        <p>Ders kitabı.</p>
+      </article>
+    </section>
+
+    <section id="ingilizce" class="tab-content" role="tabpanel" aria-labelledby="ingilizce-tab" hidden>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://ogmmateryal.eba.gov.tr/etkilesimli-kitap/ingilizce?s=21&d=223&u=0&k=0', '_blank')">
+        <div class="icon">📗</div>
+        <h3>İngilizce Kitabı</h3>
+        <p>Ders kitabı.</p>
+      </article>
+      <article class="card" tabindex="0" role="button" onclick="window.open('https://highschool.aogultegin.com/grade/grade-9/units', '_blank')">
+        <div class="icon">📚</div>
+        <h3>Aogultegin - Ekstra Kaynaklar</h3>
+        <p>Ekstra kaynaklar için Aogultegin içerikleri.</p>
+      </article>
+    </section>
+
+    <section id="program" class="timetable-section" hidden>
+      <div class="timetable-wrapper">
+        <div class="timetable">
+          <h2>📅 Haftalık Ders Programı</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Gün</th>
+                <th>Ders 1</th><th>Ders 2</th><th>Ders 3</th><th>Ders 4</th>
+                <th>Ders 5</th><th>Ders 6</th><th>Ders 7</th><th>Ders 8</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pazartesi</td>
+                <td>Biyoloji</td><td>Biyoloji</td><td>Edebiyat</td><td>Edebiyat</td>
+                <td>Bilişim ve Teknoloji</td><td>Temel Dinî Bilgiler</td><td>Kimya</td><td>Kimya</td>
+              </tr>
+              <tr>
+                <td>Salı</td>
+                <td>Edebiyat</td><td>Edebiyat</td><td>İngilizce</td><td>İngilizce</td>
+                <td>Matematik</td><td>Matematik</td><td>Sağlık</td><td>Rehberlik</td>
+              </tr>
+              <tr>
+                <td>Çarşamba</td>
+                <td>Coğrafya</td><td>Coğrafya</td><td>Beden</td><td>Beden</td>
+                <td>Görsel / Müzik</td><td>Görsel / Müzik</td><td>Bilişim ve Teknoloji (Proje)</td><td>Bilişim ve Teknoloji (Proje)</td>
+              </tr>
+              <tr>
+                <td>Perşembe</td>
+                <td>Matematik</td><td>Matematik</td><td>İngilizce</td><td>İngilizce</td>
+                <td>Fizik</td><td>Fizik</td><td>Din</td><td>Din</td>
+              </tr>
+              <tr>
+                <td>Cuma</td>
+                <td>Matematik</td><td>Matematik</td><td>Tarih</td><td>Tarih</td>
+                <td>Almanca</td><td>Almanca</td><td>Edebiyat (Kitap Okuma Saati)</td><td>Adabımuaşeret</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> ITC • Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
