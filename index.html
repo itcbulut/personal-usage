@@ -23,6 +23,7 @@
     <button class="tab-btn" aria-selected="false" data-tab="kimya" id="kimya-tab" role="tab" onclick="showTab('kimya')">Kimya</button>
     <button class="tab-btn" aria-selected="false" data-tab="biyo" id="biyo-tab" role="tab" onclick="showTab('biyo')">Biyoloji</button>
     <button class="tab-btn" aria-selected="false" data-tab="ingilizce" id="ingilizce-tab" role="tab" onclick="showTab('ingilizce')">İngilizce</button>
+    <button class="tab-btn" aria-selected="false" data-tab="diger" id="diger-tab" role="tab" onclick="showTab('diger')">Diğer</button>
   </nav>
 
   <main class="container">
@@ -87,6 +88,26 @@
         <p>Ekstra kaynaklar için Aogultegin içerikleri.</p>
       </article>
     </section>
+
+<section id="diger" class="tab-content" role="tabpanel" aria-labelledby="diger-tab" hidden>
+  <article class="card" tabindex="0" role="button" onclick="window.open('assets/saglik_kitap.pdf', '_blank')">
+    <div class="icon">📒</div>
+    <h3>Sağlık Bilgisi Kitabı</h3>
+    <p>Ders kitabı.</p>
+  </article>
+
+  <article class="card" tabindex="0" role="button" onclick="window.open('assets/alm_s.pdf', '_blank')">
+    <div class="icon">📘</div>
+    <h3>Almanca Schülerbuch</h3>
+    <p>Ders kitabı.</p>
+  </article>
+
+  <article class="card" tabindex="0" role="button" onclick="window.open('assets/alm_a.pdf', '_blank')">
+    <div class="icon">📗</div>
+    <h3>Almanca Arbeitsbuch</h3>
+    <p>Çalışma kitabı.</p>
+  </article>
+</section>
 
     <section id="program" class="timetable-section" hidden>
       <div class="timetable-wrapper">
